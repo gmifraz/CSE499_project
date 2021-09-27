@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Predictor</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="../static/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="../static/images/fevicon.png" type="image/gif"/>
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="../static/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+          media="screen">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+<body class="main-layout">
+<!-- loader  -->
+<div class="loader_bg">
+    <div class="loader"><img src="../static/images/loading.gif" alt="#"/></div>
+</div>
+<!-- end loader -->
+<!-- header -->
+
+<!-- end header inner -->
+<!-- end header -->
+<!-- banner -->
+<section class="banner_main">
+    <div class="container">
+        <div class="row d_flex">
+            <div class="col-md-12">
+                <div class="text-bg">
+                    <h1 class="text-success">Predicted Price <span class="text-white">{{prediction}} BDT</span></h1>
+                    <h3>Best car price prediction</h3>
+                    <strong>Project for CSE 499</strong>
+                    <span>Comparative Analysis of Machine Learning for Used Car Price Prediction  </span>
+                    <p>
+
+                        <head></head>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- end banner -->
+
+<!-- bestCar -->
+<div id="contact" class="bestCar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-6 offset-md-6">
+                        <form class="main_form" method="post" action="http://127.0.0.1:5000/api/">
+                            <div class="titlepage">
+                                <h2>Find The Best Car Price</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <select name="fuel_type">
+                                        <option value="Petrol">Petrol</option>
+                                        <option value="Diesel">Diesel</option>
+                                        <option value="CNG">CNG</option>
+                                        <option value="LPG">LPG</option>
+                                        <option value="Electric">Electric</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <select name="model_year">
+                                        <option value="0">Model Year</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <select name="transmission">
+                                        <option value="">Select Transmission</option>
+                                        <option value="1">Automatic</option>
+                                        <option value="0">Manual</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <select name="owner_type">
+                                        <option value="First Owner">First Owner</option>
+                                        <option value="Second Owner">Second Owner</option>
+                                        <option value="Fourth & Above Owner">Fourth & Above Owner</option>
+                                        <option value="Third Owner">Third Owner</option>
+                                        <option value="Test Drive Car">Test Drive Car</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="form-control selectpicker2" placeholder="Enter Millage"
+                                       data-width="100%" tabindex="-98" id="kilometers_run" name="km_driven"
+                                       required>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <button type="submit" class="find_btn">Predict!</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- end bestCar -->
+
+<!-- car -->
+<div class="car">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>ABOUT THE PROJECT </h2>
+                    <span>Predicting Used Car Prices with Machine Learning Technique will help people to have the perfect approximation of their product which will be a huge helping factor to get it sold. various learning methods are implemented on a dataset consisting of the sale prices of different makes, models and other features.
+
+                     </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 padding_leri">
+                <div class="car_box">
+                    <figure><img src="../static/images/car_img1.png" alt="#"/></figure>
+                    <h3>Hundai</h3>
+                </div>
+            </div>
+            <div class="col-md-4 padding_leri">
+                <div class="car_box">
+                    <figure><img src="../static/images/car_img2.png" alt="#"/></figure>
+                    <h3>Audi</h3>
+                </div>
+            </div>
+            <div class="col-md-4 padding_leri">
+                <div class="car_box">
+                    <figure><img src="../static/images/car_img3.png" alt="#"/></figure>
+                    <h3>Bmw x5</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end car -->
+
+<!-- choose  section
+<div class="choose ">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>Why Choose Us</h2>
+               <span>It is a long established fact that a reader will be distracted by the readable content of a page when<br> looking at its layout. The point of using </span>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div class="choose_box">
+               <span>01</span>
+               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making </p>
+            </div>
+         </div>
+         <div class="col-md-12">
+            <div class="choose_box">
+               <span>02</span>
+               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making </p>
+            </div>
+         </div>
+         <div class="col-md-12">
+            <div class="choose_box">
+               <span>03</span>
+               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+end choose  section -->
+
+<!-- cutomer
+<div class="cutomer">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>What is says our cutomer</h2>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide cutomer_Carousel " data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="carousel-caption ">
+                           <div class="cross_img">
+                              <figure><img src="../static/images/cross_img.png" alt="#"/></figure>
+                           </div>
+                           <div class="our cross_layout">
+                              <div class="test_box">
+                                 <h4>Due markes</h4>
+                                 <span>Rental</span>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+                                 <i><img src="../static/images/te1.png" alt="#"/></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="cross_img">
+                              <figure><img src="../static/images/cross_img.png" alt="#"/></figure>
+                           </div>
+                           <div class="our cross_layout">
+                              <div class="test_box">
+                                 <h4>Due markes</h4>
+                                 <span>Rental</span>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+                                 <i><img src="../static/images/te1.png" alt="#"/></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="cross_img">
+                              <figure><img src="../static/images/cross_img.png" alt="#"/></figure>
+                           </div>
+                           <div class="our cross_layout">
+                              <div class="test_box">
+                                 <h4>Due markes</h4>
+                                 <span>Rental</span>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+                                 <i><img src="../static/images/te1.png" alt="#"/></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+end cutomer -->
+<!--  footer -->
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cont_call">
+                        <h3><strong class="multi color_chang"> Call Now</strong><br>
+                            (+880) 1682840294
+                        </h3>
+                    </div>
+                    <div class="cont">
+                        <h3><strong class="multi">North South University</strong>
+
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>© 2021 All Rights Reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+<!-- Javascript files-->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/jquery-3.0.0.min.js"></script>
+<script src="../static/js/plugin.js"></script>
+<!-- sidebar -->
+<script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../static/js/custom.js"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+</html>
+
